@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Compra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background-color: #cbe5f1;
+        }
+        .logo {
+            max-width: 120px; /* Ajuste o tamanho do logo */
+        }
+        .nav-link img {
+            max-width: 60px; /* Aumentar o tamanho dos ícones */
+            height: auto; /* Manter proporção */
+            margin-right: 20px; /* Espaço entre ícone e texto */
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="assets/img/Captura de tela 2024-10-10 153148.png" alt="Pedro Queixada" class="logo">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html"><img src="assets/img/home.png" alt="Home Icon"> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dicas.html"><img src="assets/img/dicas.png" alt="Dicas Icon"> Dicas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="loja.html"><img src="assets/img/sacola.png" alt="Loja Icon"> Loja</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html"><img src="assets/img/contato.png" alt="Contato Icon"> Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <h1 class="text-center mb-4">Entre em Contato:</h1>
+        <div class="card p-4 shadow-sm">
+            <form action="processar_mensagem.php" method="POST">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" required class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required class="form-control">
+                </div>
+
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" name="descricao" required class="form-control" rows="4"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+            </form>
+
+            <!-- Success Message -->
+            <div id='successMessage' style='display:none;' class='alert alert-success mt-3'></div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- j
